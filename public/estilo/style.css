@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+:root{
+    --cor0: #2D5E13;
+    --cor1: #1c3a0c;
+    --cor3: #142c09;
+}
+
+*{
+    font-family: 'Abyssinica SIL', serif;
+    text-align: center;
+}
+ion-icon {
+    pointer-events: none;
+}
+.container-fluid {
+    width: 300px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+.msg{
+    background-color: #81db96;
+    border-color: #1c3a0c;
+    border: 1px solid black;
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+}
+.menu{
+    text-align: right;
+    color: var(--cor3);
+    display: inline-block;
+}
+nav.menu{
+    text-align: right;
+}
+
+.form-control{
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    max-width: 160px;
+    max-height: 40px;
+}
+
+.form-group{
+    text-align: center;
+    display: inline-block; 
+    margin: 5px;
+}
+.formulario1{
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    display: inline-block;
+    min-width: 400px
+}
+.formulario1 p{
+    padding-top: 15px;
+}
+.info-cadastro{
+    margin: 20px;
+}
+.datas{
+    display: inline-block;
+}
+.btn-primary{
+    color: #ffffff !important; 
+    background-color: rgb(2, 70, 0) !important;
+    border-color: #061b00 !important;
+}
+.btn-primary:hover{
+    background-color: #061b00 !important;
+}
+#search-container{
+    padding: 20px;
+}
+#calendar{
+    margin-bottom: 50px;
+}
+#events-container{
+    text-align: center;
+    
+}
+#cards-container{
+    padding-bottom: 20px;
+}
+
+header{
+    margin: -8px;
+    min-height: 90px;
+    text-align: left;
+    padding: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.527);
+}
+header nav a{
+    text-align: right;
+    text-decoration: none;
+    padding-left: 15px;
+    color: var(--cor3);
+}
+
+
+header nav a:hover{
+    color: #1c3a0c;
+    text-decoration: underline;
+
+}
+
+
+header li{
+    list-style: none;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+body p{
+    margin: 20px;
+}
+h2{
+    padding: 50px;
+}
+
+h1 {
+    text-align: center;
+    padding: 30px;
+}
+footer{
+    background-color: var(--cor3);
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+}
+footer p{
+    margin: 0px;
+    padding: 6px;
+}
+footer a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-bottom: 0px;
+    margin: 5px;
+    line-height: 20px;
+}
+footer a:hover{
+    text-decoration: underline;
+    margin-bottom: 0px;
+    color: rgb(112, 111, 111);
+}
