@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AssistidaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,5 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/assistida',[AssistidaController::class, 'index'])->name('assistida.index');
+Route::get('/cadastro',[AssistidaController::class, 'create'])->name('assistida.create');
+Route::post('/cadastro/novo',[AssistidaController::class, 'store'])->name('assistida.store');

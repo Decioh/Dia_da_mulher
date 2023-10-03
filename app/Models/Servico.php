@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cidade extends Model
+class Servico extends Model
 {
     use HasFactory;
 
-    public function usuarios()
+    public function assistida()
     {
-        return $this->hasMany(Usuario::class, 'cidades');
+        return $this->belongsTo(Assistida::class, 'assistida_id');
     }
 }

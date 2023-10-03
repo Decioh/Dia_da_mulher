@@ -11,6 +11,10 @@ class Assistida extends Model
 
     public function cidade()
     {
-        return $this->belongsTo(Cidade::class);
+        return $this->belongsTo(Cidade::class,'cidades');
+    }
+    public function servico()
+    {
+        return $this->hasMany(Servico::class);
     }
 }
