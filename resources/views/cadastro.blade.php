@@ -12,8 +12,8 @@
         <input type="text" id="nome" name="nome" required>
     </div><br>
     <div class="cadastrotel"> 
-        <label for="telefone"><b>Telefone:</b></label>
-        <input type="text" id="telefone" name="telefone" maxlength="11" required>
+        <label for="tel"><b>Telefone:</b></label>
+        <input type="text" id="tel" name="tel" maxlength="11" required>
     </div> <br>
     <div class="cidade"> 
         <label for="email"><b>E-mail:</b></label>

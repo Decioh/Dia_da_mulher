@@ -15,22 +15,22 @@ class AssistidaController extends Controller
 {
     public function create()
     {
-       # $cidades = DB::table('cidades')->get();
+        $cidades = DB::table('cidades')->get();
 
         $assistidas = DB::table('assistidas')->get();
 
       return view('cadastro',['cidades'=>$cidades, 'assistidas'=>$assistidas]);
     }
-    public function store()
+    public function store(Request $req)
     {
         $nome = $req->nome;
-        $telefone = $req->telefone;
+        $tel = $req->tel;
         $cidade = $req->cidade;
 
         $assistida = new Assistida();
 
         $assistida->nome = $nome;
-        $assistida->telefone = $tel;
+        $assistida->tel = $tel;
         $assistida->cidade = $cidade;
 
         $assistida->save();

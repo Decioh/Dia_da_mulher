@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('servicos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('assistida_id');
-            $table->foreign('assistida_id')->references('id')->on('assistida');
-            $table->integer('lanche');
+            $table->foreign('assistida_id')->references('id')->on('assistidas');
+            $table->integer('lanche')->default(0) ; 
             $table->integer('lanches_QTD');
             $table->boolean('acompanhada');
             $table->boolean('defensoria');
