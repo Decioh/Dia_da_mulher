@@ -36,7 +36,7 @@
                 <td>{{$assistida->nome}}</td>
                 <td>{{$tel}}</td>
                 <td>{{$assistida->email}}</td>
-                <td>{{$assistida->cidade}}</td>
+                <td>{{$cidades[$assistida->cidades_id-1]->RA}}</td>
                 <td>@if($assistida->created_at != null){{date('d/m/Y', strtotime($assistida -> created_at))}} @else - @endif</td>
                 <td>
                     <a href="#{{--route('assistida.info', $assistida-> id)--}}"class="btn btn-secondary btn-sm"> info </a>
@@ -48,7 +48,7 @@
 @endforeach
 @if(isset($search))
     @if((count($assistidas)==0))
-        <p>Não foi encontrado um assistido cadastrado com esse nome/CPF</p> 
+        <p>Não foi encontrada uma assistida com o dado pesquisado: {{$search}}</p> 
     @endif
 @endif
     <a href="#{{--route('assistida.novo')--}}"class="btn btn-success btn-sm"> Cadastrar </a>  

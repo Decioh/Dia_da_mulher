@@ -37,10 +37,31 @@
         </div>
         <div class="container p-5">
             <div class="mb-3 form-check form-check-inline">
-              <label> Defensoria Pública <input class="ml-3" type="checkbox" name="defensoria_publica"></label>
-              <label> CRAS <input type="checkbox" name="cras"></label>
-              <label> CODHAB <input type="checkbox" name="codhab"></label>
-              <label> SENAC <input type="checkbox" name="senac"></label>
+              <label class="mx-3"> Defensoria Pública <input type="checkbox" name="defensoria_publica"></label>
+              <label class="mx-3"> CRAS <input  type="checkbox" name="cras"></label>
+              <label class="mx-3"> CODHAB <input  type="checkbox" name="codhab"></label>
+              <label class="mx-3"> SENAC <input  type="checkbox" name="senac"></label>
+            </div>
+            <div class="mb-3 form-check form-check-inline">
+                <label class="mx-3"> SESC Consulta       <input type="checkbox" name="sesc_consulta"></label>
+                <label class="mx-3"> SESC Sensibilização <input type="checkbox" name="sesc_sens"></label>
+                <label class="mx-3"> SESC Mamografia     <input type="checkbox" name="sesc_mamografia"></label>
+                <label class="mx-3"> SESC Odonto         <input type="checkbox" name="sesc_odonto"></label>
+            </div>
+            <div class="mb-3 form-check form-check-inline">
+                <label class="mx-3"> SESC Inserção DIU   <input type="checkbox" name="sesc_insercao_diu"></label>
+                <label class="mx-3"> SESC Citopatológico <input type="checkbox" name="sesc_citopatologico"></label>
+                <label class="mx-3"> SESC Enfermagem     <input type="checkbox" name="sesc_enfermagem"></label>
+            </div><br>
+            <div class="mb-3 form-check form-check-inline">
+                <label class="mx-3"> SEDET               <input type="checkbox" name="sedet"></label>
+                <label class="mx-3"> Secretaria da mulher<input type="checkbox" name="secretaria_da_mulher"></label>
+                <label class="mx-3"> Secretaria de Saúde <input type="checkbox" name="sec_saude"></label>
+            </div><br>
+            <div class="mb-3 form-check form-check-inline">
+                <label class="mx-3"> Sejus Subav         <input type="checkbox" name="sejus_subav"></label>
+                <label class="mx-3"> Delegacia da mulher <input type="checkbox" name="delegacia_da_mulher"></label>
+                <label class="mx-3"> Fiocruz             <input type="checkbox" name="Fiocruz"></label>
             </div>
         </div>
         <div class="mb-3 form-check form-check-inline">

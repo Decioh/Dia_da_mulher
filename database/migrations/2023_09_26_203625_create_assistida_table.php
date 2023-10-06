@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('nome');
             $table->string('tel');
             $table->string('email');
-            $table->unsignedBigInteger('cidade');
-            $table->foreign('cidade')->references('id')->on('cidades');
+            $table->foreignId('cidades_id');
+            $table->foreign('cidades_id')->references('id')->on('cidades');
             $table->timestamps();
         });
     }

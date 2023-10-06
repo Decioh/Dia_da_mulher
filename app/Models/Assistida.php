@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Assistida extends Model
 {
@@ -11,7 +12,7 @@ class Assistida extends Model
 
     public function cidade()
     {
-        return $this->belongsTo(Cidade::class,'cidades');
+        return $this->belongsTo(Cidade::class,"cidades_id");
     }
     public function servico()
     {

@@ -20,7 +20,7 @@ class AssistidaController extends Controller
             if($search){
                 $assistidas = DB::table('assistidas')
                     ->where('nome', 'like', '%'.$search.'%')
-                    ->orWhere('cpf', 'like','%'.$search.'%')->simplePaginate(20);
+                    ->orWhere('tel', 'like','%'.$search.'%')->simplePaginate(20);
             }
             else{
                 $assistidas = Assistida::orderBy('nome', 'asc')->simplePaginate(20);
@@ -48,7 +48,7 @@ class AssistidaController extends Controller
 
         $assistida->nome = $nome;
         $assistida->tel = $tel;
-        $assistida->cidade = $cidade;
+        $assistida->cidades_id = $cidade;
         $assistida->email = $email;
 
         $assistida->save();
