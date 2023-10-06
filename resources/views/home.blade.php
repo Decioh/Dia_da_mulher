@@ -2,7 +2,8 @@
 
 @section('title', 'Agendar')
 
-@section('content')  
+@section('content') 
+
 <div id="search-container" class="col-md-12 justify-content-center">
     <h2>Buscar assistido</h2>
     <form action="#" method="GET">
@@ -17,44 +18,44 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Nome</th>
-            <th scope="col">Nascimento</th>
-            <th scope="col">Cpf</th>
-            <th scope="col">E-mail</th>
             <th scope="col">Telefone</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Data</th>
             <th scope="col">Ação</th>
         </tr>
     </thead>
-{{--@foreach ($assistidos as $assistido)
+@foreach ($assistidas as $assistida)
         @php
-        $cpf = preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "\$1.\$2.\$3-\$4", $assistido -> cpf);
-        $tel = preg_replace("/(\d{0})(\d{2})(\d{5})(\d{4})/", "\$1(\$2)\$3-\$4", $assistido -> telefone);
+        /*$cpf = preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "\$1.\$2.\$3-\$4", $assistida -> cpf);*/
+        $tel = preg_replace("/(\d{0})(\d{2})(\d{5})(\d{4})/", "\$1(\$2)\$3-\$4", $assistida -> tel);
         @endphp
         <tbody>
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
-                <td>{{$assistido->nome}}</td>
-                <td>@if($assistido->nasc != null){{date('d/m/Y', strtotime($assistido -> nasc))}} @else - @endif</td>
-                <td>{{$cpf}}</td>
-                <td>{{$assistido->email}}</td>
+                <td>{{$assistida->nome}}</td>
                 <td>{{$tel}}</td>
+                <td>{{$assistida->email}}</td>
+                <td>{{$assistida->cidade}}</td>
+                <td>@if($assistida->created_at != null){{date('d/m/Y', strtotime($assistida -> created_at))}} @else - @endif</td>
                 <td>
-                    <a href="{{route('assistido.info', $assistido-> id)}}"class="btn btn-secondary btn-sm"> info </a>
-                    <a href="{{ route('agenda.list', $assistido-> id)}}"class="btn btn-success btn-sm"> Agendar </a>
+                    <a href="#{{--route('assistida.info', $assistida-> id)--}}"class="btn btn-secondary btn-sm"> info </a>
+                    <a href="#{{-- route('agenda.list', $assistida-> id)--}}"class="btn btn-success btn-sm"> Agendar </a>
                 </td>
             </tr>
         </tbody>
     
 @endforeach
 @if(isset($search))
-    @if((count($assistidos)==0))
+    @if((count($assistidas)==0))
         <p>Não foi encontrado um assistido cadastrado com esse nome/CPF</p> 
     @endif
 @endif
-    <a href="{{route('assistido.novo')}}"class="btn btn-success btn-sm"> Cadastrar </a>  
+    <a href="#{{--route('assistida.novo')--}}"class="btn btn-success btn-sm"> Cadastrar </a>  
     </div>
     
     <div class="mt-3 mx-auto" style="width: 150px">
-    {{$assistidos->links()}}
+    {{$assistidas->links()}}
     </div>
---}}
+
 @endsection

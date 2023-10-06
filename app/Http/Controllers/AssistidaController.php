@@ -13,6 +13,22 @@ use Illuminate\Routing\Controller as BaseController;
 
 class AssistidaController extends Controller
 {
+
+    public function index(){
+        
+        $search = request('search');
+            if($search){
+                $assistidas = DB::table('assistidas')
+                    ->where('nome', 'like', '%'.$search.'%')
+                    ->orWhere('cpf', 'like','%'.$search.'%')->simplePaginate(20);
+            }
+            else{
+                $assistidas = Assistida::orderBy('nome', 'asc')->simplePaginate(20);
+            }
+        $cidades = DB::table('cidades')->get();
+    return view ('home', ['assistidas'=>$assistidas, 'search'=>$search, 'cidades'=>$cidades]);
+    }
+
     public function create()
     {
         $cidades = DB::table('cidades')->get();
@@ -26,13 +42,17 @@ class AssistidaController extends Controller
         $nome = $req->nome;
         $tel = $req->tel;
         $cidade = $req->cidade;
+        $email = $req->email;
 
         $assistida = new Assistida();
 
         $assistida->nome = $nome;
         $assistida->tel = $tel;
         $assistida->cidade = $cidade;
+        $assistida->email = $email;
 
         $assistida->save();
+     
+    return redirect()->route('assistida.index');
     }
 }
