@@ -1,11 +1,10 @@
 
-# Setup Docker Laravel 10 com PHP 8.1
-[Assine a Academy, e Seja VIP!](https://academy.especializati.com.br)
+# Setup aplicação dia_da_mulher
 
 ### Passo a passo
 Clone Repositório
 ```sh
-git clone -b laravel-10-com-php-8.1 https://github.com/especializati/setup-docker-laravel.git app-laravel
+git clone [https://github.com/especializati/setup-docker-laravel.git app-laravel](https://github.com/Decioh/dia_da_mulher.git)](https://github.com/Decioh/dia_da_mulher.git)
 ```
 ```sh
 cd app-laravel
