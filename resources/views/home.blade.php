@@ -21,7 +21,7 @@
             <th scope="col">Telefone</th>
             <th scope="col">E-mail</th>
             <th scope="col">Cidade</th>
-            <th scope="col">Data</th>
+            <th scope="col">Último atendimento</th>
             <th scope="col">Ação</th>
         </tr>
     </thead>
@@ -37,7 +37,7 @@
                 <td>{{$tel}}</td>
                 <td>{{$assistida->email}}</td>
                 <td>{{$cidades[$assistida->cidades_id-1]->RA}}</td>
-                <td>@if($assistida->created_at != null){{date('d/m/Y', strtotime($assistida -> created_at))}} @else - @endif</td>
+                <td>@if($assistida->created_at != null){{date('d/m/Y', strtotime($assistida -> updated_at))}} @else - @endif</td>
                 <td>
                     <a href="#{{--route('assistida.info', $assistida-> id)--}}"class="btn btn-secondary btn-sm"> info </a>
                     <a href="#{{-- route('agenda.list', $assistida-> id)--}}"class="btn btn-success btn-sm"> Agendar </a>
