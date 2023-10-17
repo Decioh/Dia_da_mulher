@@ -10,11 +10,12 @@
     <!-- CSS bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    <!--Script-->
     <script src={{asset('/js/scripts.js')}}></script>
-    <!--Flatpickr.js-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <!--Ion icons-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Admin LTE-->
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
     <!--Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,22 +28,8 @@
         <a href="/"><img src="{{asset('/img/DP_DF-preto.png')}}" alt="logo-defensoria" height="59px" width="225px"></a>
         <nav class = 'menu'>
         <a href="/">Home</a>
-        @auth
-        <div class= 'menu'>
-        <form method="POST" name="logout" action="{{ route('logout') }}">
-        @csrf
-        <a href="javascript:document.logout.submit()">Logout</a>
-        </form>
-        </div>
-        @if ((Auth::user()->user_type) == 1)
-            <a href="{{ route('mediacao.agendamentos') }}">Meus atendimentos</a>
-        @endif
-        @endauth
-        @guest
-        <a href="#">Login</a>
         <a href="{{route('assistida.create')}}">Cadastrar</a>
-        @endguest
-        {{--<a href="{{ route('calendario.get') }}">Calendario</a>--}}
+        <a href="#">Estatísticas</a>
         </nav>
         
     </header>
@@ -55,27 +42,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!-- flatpickr -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
-        <!-- Mudar lingua do flatpickr -->
-        <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
-            <script>
-                flatpickr.localize(flatpickr.l10ns.pt)
-                flatpickr('.flatpickr-input')
-            </script>
-        <script>
-        config = {
-            enableTime: true,
-            dateFormat: "Y-m-d H:i",
-            minDate: "today",
-            time_24hr: true,
-        }
-        flatpickr("input[type=datetime]", config);
-        flatpickr(myElement, {
-    "locale": "pt_BR"  // locale for this instance only
-    });
-    </script>
     
 </body>
 </html>
