@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AssistidaController;
+use App\Http\Controllers\ServicoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,7 @@ Route::get('/',[AssistidaController::class, 'index'])->name('assistida.index');
 Route::get('/cadastro',[AssistidaController::class, 'create'])->name('assistida.create');
 Route::post('/cadastro/novo',[AssistidaController::class, 'store'])->name('assistida.store');
 
-Route::get('/dashboard', function(){
-    return view('/dashboard/dashboard');
-});
+Route::get('/estatisticas',[ServicoController::class, 'dashboard'])->name('dashboard');
+
+
 

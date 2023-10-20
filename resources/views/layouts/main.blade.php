@@ -16,6 +16,8 @@
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
     <!-- Compiled and minified CSS -->
+    <!--Chart JS-->
+    <script src={{asset('public/js/chart.js')}}></script>
 
     <!--Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +32,7 @@
         <nav class = 'menu'>
             <a href="/">Home</a>
             <a href="{{route('assistida.create')}}">Cadastrar</a>
-            <a href="#">Estatísticas</a>
+            <a href="{{route('dashboard')}}">Estatísticas</a>
         </nav>
         
     </header>

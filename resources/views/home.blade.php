@@ -6,8 +6,8 @@
 
 <div id="search-container" class="col-md-12 justify-content-center">
     <h2>Buscar assistido</h2>
-    <form action="#" method="GET">
-        <input type="text" id="search" name="search" placeholder="Procure pelo Nome ou CPF"> <br>
+    <form action="{{route('assistida.index')}}" method="GET">
+        <input type="text" id="search" name="search" placeholder="Procure pelo Nome ou Tel"> <br>
         <button type="submit" class="btn btn-warning btn-sm mt-1">Pesquisar</button>
     </form>
 </div>
@@ -51,7 +51,7 @@
         <p>Não foi encontrada uma assistida com o dado pesquisado: {{$search}}</p> 
     @endif
 @endif
-    <a href="#{{--route('assistida.novo')--}}"class="btn btn-success btn-sm"> Cadastrar </a>  
+    <a href="{{route('assistida.create')}}"class="btn btn-success btn-sm"> Cadastrar </a>  
     </div>
     
     <div class="mt-3 mx-auto" style="width: 150px">
